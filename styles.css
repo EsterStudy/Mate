@@ -1,0 +1,67 @@
+:root {
+  --device-width: 390px;
+  --screen-bg: #0a0a0f;
+  --hotspot-color: rgba(255, 255, 255, 0);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #050509;
+  color: #fff;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 8px;
+}
+
+.screen {
+  width: var(--device-width);
+  background: var(--screen-bg);
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 16px 64px rgba(0, 0, 0, 0.5);
+}
+
+.screen__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.screen__hotspot {
+  position: absolute;
+  display: block;
+  background: var(--hotspot-color);
+  z-index: 2;
+}
+
+.screen__hotspot--tab-main { left: 16px; bottom: 0; width: 52px; height: 78px; }
+.screen__hotspot--tab-challenges { left: 88px; bottom: 0; width: 78px; height: 78px; }
+.screen__hotspot--tab-feed { left: 162px; bottom: 0; width: 60px; height: 78px; }
+.screen__hotspot--tab-menu { left: 226px; bottom: 0; width: 60px; height: 78px; }
+.screen__hotspot--tab-profile { left: 298px; bottom: 0; width: 72px; height: 78px; }
+
+.screen__hotspot--assistant { left: 16px; top: 60px; width: 358px; height: 140px; }
+.screen__hotspot--daily { left: 16px; top: 220px; width: 358px; height: 196px; }
+.screen__hotspot--challenge-card { left: 16px; top: 430px; width: 358px; height: 160px; }
+
+.screen__hotspot--tasks-morning { left: 18px; top: 108px; width: 84px; height: 36px; }
+.screen__hotspot--tasks-day { left: 108px; top: 108px; width: 72px; height: 36px; }
+.screen__hotspot--tasks-evening { left: 188px; top: 108px; width: 84px; height: 36px; }
+.screen__hotspot--tasks-periodic { left: 280px; top: 108px; width: 94px; height: 36px; }
+
+.screen__hotspot--story-next { left: 0; top: 64px; width: 390px; height: calc(100% - 64px); }
+.screen__hotspot--story-close { left: 8px; top: 18px; width: 44px; height: 44px; }
+
+.screen__hotspot--article-next { right: 10px; top: 54px; width: 42px; height: 42px; }
+.screen__hotspot--article-back { left: 10px; top: 54px; width: 42px; height: 42px; }
